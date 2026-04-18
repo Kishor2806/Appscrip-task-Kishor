@@ -1,0 +1,23 @@
+html,
+body {
+	min-height: 100%;
+}
+
+body {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	font-family: var(--font-geist-sans), sans-serif;
+}
+
+.main-layout {
+	display: flex;
+	position: relative;
+	align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+	.main-layout {
+		flex-direction: column;
+	}
+}
