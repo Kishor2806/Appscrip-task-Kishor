@@ -1,19 +1,16 @@
-export const dynamic = "force-dynamic";
-
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import CatalogSection from "../components/CatalogSection";
 import Footer from "../components/Footer";
 
-// export const revalidate = 3600;
+export const revalidate = 3600;
 
 export default async function Home() {
   let products = [];
 
   try {
     const res = await fetch("https://fakestoreapi.com/products", {
-      cache: "no-store"
-      // next: { revalidate: 3600 },
+      next: { revalidate: 3600 },
     });
 
     if (!res.ok) {
